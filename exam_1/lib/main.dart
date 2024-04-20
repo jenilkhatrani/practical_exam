@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 
 void main()
 {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     debugShowCheckedModeBanner: false,
     home: mainscreen(),
   ));
@@ -21,10 +20,10 @@ class _mainscreenState extends State<mainscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.home,
+        leading: const Icon(Icons.home,
         size: 40,),
         centerTitle: true,
-        title: Text('amazon',
+        title: const Text('amazon',
         style: TextStyle(
           fontSize: 40,
           fontWeight: FontWeight.bold
@@ -36,39 +35,36 @@ class _mainscreenState extends State<mainscreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SizedBox(width: 10,),
+            const SizedBox(width: 10,),
             Container(
               height: 450,
               width: 450,
               color: Colors.grey.shade200,
             child: Padding(
-              padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+              padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
               child: SizedBox(
                 child: Column(
                   children: [
                     Row(
                       children: [
                         Container(
-                          child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
+                          child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
                         ),
-                        SizedBox(width: 20,),
-                        Text('samsung s21\nsamsung s21 fe '
+                        const SizedBox(width: 20,),
+                        const Text('samsung s21\nsamsung s21 fe '
                             'with \n'
                             'snapdragen 888',style: TextStyle(fontSize: 20),),
 
                       ],
                     ),
-                    Container(
-                      child: Padding(
-                        padding: const EdgeInsets.fromLTRB(5, 0, 370, 0),
-                        child: Row(
-                          children: [
-                            Text('\$299',style: TextStyle(fontSize: 20),),
-
-                          ],
-                        ),
-                      ),),
-
+                    const Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Text('\$299',style: TextStyle(fontSize: 20),),
+                        Spacer(),
+                        Text('3.2(3000)',style: TextStyle(fontSize: 20),),
+                      ],
+                    ),
                     SingleChildScrollView(
                       scrollDirection: Axis.horizontal
                       ,
@@ -76,16 +72,16 @@ class _mainscreenState extends State<mainscreen> {
 
                         children: [
                           Container(
-                            child: Image.asset('asset/hd.jpeg',height: 200,width: 200,)
-                            ,), SizedBox(width: 20,),
+                            child: Image.asset('asset/iphone13.jpg',height: 200,width: 200,)
+                            ,), const SizedBox(width: 20,),
                           Container(
-                            child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
+                            child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
                           ),
-                          SizedBox(width: 20,),
+                          const SizedBox(width: 20,),
                           Container(
                           child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                           ) ,
-                          SizedBox(width: 20,),
+                          const SizedBox(width: 20,),
                           Container(
                           child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                           )
@@ -97,48 +93,51 @@ class _mainscreenState extends State<mainscreen> {
               ),
             ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
               height: 450,
               width: 450,
               color: Colors.grey.shade200,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: SizedBox(
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Container(
-                            child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
-                          ),  SizedBox(width: 20,),
-                          Text('samsung s21\nsamsung s21 fe '
+                            child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
+                          ),  const SizedBox(width: 20,),
+                          const Text('samsung s21\nsamsung s21 fe '
                               'with \n'
                               'snapdragen 888',style: TextStyle(fontSize: 20),),
                         ],
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(5, 0, 370, 0),
-                          child: Text('\$299',style: TextStyle(fontSize: 20),),
-                        ),),
-                SingleChildScrollView(
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text('\$299',style: TextStyle(fontSize: 20),),
+                          Spacer(),
+                          Text('3.2(3000)',style: TextStyle(fontSize: 20),),
+                        ],
+                      ),
+                      SingleChildScrollView(
                   scrollDirection: Axis.horizontal
                   ,
                   child: Row(
 
                     children: [
                   Container(
-                  child: Image.asset('asset/hd.jpeg',height: 200,width: 200,)
-                  ,), SizedBox(width: 20,),
+                  child: Image.asset('asset/iphone13.jpg',height: 200,width: 200,)
+                  ,), const SizedBox(width: 20,),
                 Container(
-                  child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
+                  child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
                 ),
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
                 Container(
                   child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                 ) ,
-                SizedBox(width: 20,),
+                const SizedBox(width: 20,),
                 Container(
                   child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                 )
@@ -148,31 +147,34 @@ class _mainscreenState extends State<mainscreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
               height: 450,
               width: 450,
               color: Colors.grey.shade200,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: SizedBox(
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Container(
-                            child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
-                          ),  SizedBox(width: 20,),
-                          Text('samsung s21\nsamsung s21 fe '
+                            child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
+                          ),  const SizedBox(width: 20,),
+                          const Text('samsung s21\nsamsung s21 fe '
                               'with \n'
                               'snapdragen 888',style: TextStyle(fontSize: 20),),
                         ],
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(5, 0, 370, 0),
-                          child: Text('\$299',style: TextStyle(fontSize: 20),),
-                        ),),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text('\$299',style: TextStyle(fontSize: 20),),
+                          Spacer(),
+                          Text('3.2(3000)',style: TextStyle(fontSize: 20),),
+                        ],
+                      ),
                       SingleChildScrollView(
                           scrollDirection: Axis.horizontal
                           ,
@@ -180,16 +182,16 @@ class _mainscreenState extends State<mainscreen> {
 
                               children: [
                                 Container(
-                                  child: Image.asset('asset/hd.jpeg',height: 200,width: 200,)
-                                  ,), SizedBox(width: 20,),
+                                  child: Image.asset('asset/iphone13.jpg',height: 200,width: 200,)
+                                  ,), const SizedBox(width: 20,),
                                 Container(
-                                  child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
+                                  child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
                                 ),
-                                SizedBox(width: 20,),
+                                const SizedBox(width: 20,),
                                 Container(
                                   child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                                 ) ,
-                                SizedBox(width: 20,),
+                                const SizedBox(width: 20,),
                                 Container(
                                   child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                                 )
@@ -199,31 +201,34 @@ class _mainscreenState extends State<mainscreen> {
                 ),
               ),
             ),
-            SizedBox(height: 20,),
+            const SizedBox(height: 20,),
             Container(
               height: 450,
               width: 450,
               color: Colors.grey.shade200,
               child: Padding(
-                padding: EdgeInsets.fromLTRB(10, 0, 0, 0),
+                padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
                 child: SizedBox(
                   child: Column(
                     children: [
                       Row(
                         children: [
                           Container(
-                            child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
-                          ),  SizedBox(width: 20,),
-                          Text('samsung s21\nsamsung s21 fe '
+                            child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
+                          ),  const SizedBox(width: 20,),
+                          const Text('samsung s21\nsamsung s21 fe '
                               'with \n'
                               'snapdragen 888',style: TextStyle(fontSize: 20),),
                         ],
                       ),
-                      Container(
-                        child: Padding(
-                          padding: const EdgeInsets.fromLTRB(5, 0, 370, 0),
-                          child: Text('\$299',style: TextStyle(fontSize: 20),),
-                        ),),
+                      const Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        children: [
+                          Text('\$299',style: TextStyle(fontSize: 20),),
+                          Spacer(),
+                          Text('3.2(3000)',style: TextStyle(fontSize: 20),),
+                        ],
+                      ),
                       SingleChildScrollView(
                           scrollDirection: Axis.horizontal
                           ,
@@ -231,16 +236,16 @@ class _mainscreenState extends State<mainscreen> {
 
                               children: [
                                 Container(
-                                  child: Image.asset('asset/hd.jpeg',height: 200,width: 200,)
-                                  ,), SizedBox(width: 20,),
+                                  child: Image.asset('asset/iphone13.jpg',height: 200,width: 200,)
+                                  ,), const SizedBox(width: 20,),
                                 Container(
-                                  child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
+                                  child: Image.asset('asset/s21.jpeg',height: 200,width: 200,),
                                 ),
-                                SizedBox(width: 20,),
+                                const SizedBox(width: 20,),
                                 Container(
                                   child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                                 ) ,
-                                SizedBox(width: 20,),
+                                const SizedBox(width: 20,),
                                 Container(
                                   child: Image.asset('asset/hd.jpeg',height: 200,width: 200,),
                                 )
